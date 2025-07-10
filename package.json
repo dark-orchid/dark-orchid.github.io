@@ -1,0 +1,52 @@
+{
+  "name": "dark-orchid.github.io",
+  "author": {
+    "name": "Dark Orchid",
+    "url": "https://github.com/dark-orchid"
+  },
+  "contributors": [
+    {
+      "name": "David Ax",
+      "url": "https://david-ax.de",
+      "email": "me@david-ax.de"
+    },
+    {
+      "name": "Simon Kovtyk",
+      "url": "https://simonkov.dev",
+      "email": "simon@kovtyk.com"
+    }
+  ],
+  "description": "A Colorscheme, that's purple.",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mantine/core": "^8.1.3",
+    "@mantine/hooks": "^8.1.3",
+    "@mantine/modals": "^8.1.3",
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.3.5",
+    "@tabler/icons-react": "^3.34.0",
+    "@types/mdx": "^2.0.13",
+    "lucide-react": "^0.525.0",
+    "next": "15.3.5",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "postcss": "^8.5.6",
+    "postcss-preset-mantine": "^1.18.0",
+    "postcss-simple-vars": "^7.0.1",
+    "typescript": "^5"
+  }
+}

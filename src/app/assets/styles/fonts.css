@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: local("Noto Sans"),
+       url("/fonts/noto-sans/noto-sans-variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: local("Noto Sans Italic"),
+       url("/fonts/noto-sans/noto-sans-italic-variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-text.ttf") format("truetype");
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-textitalic.ttf") format("truetype");
+  font-weight: 450;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-mediumitalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-semibolditalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-bolditalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-lightitalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-extralightitalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blex Mono";
+  src: url("/fonts/blex-mono-nerd/blex-mono-nerd-thinitalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
