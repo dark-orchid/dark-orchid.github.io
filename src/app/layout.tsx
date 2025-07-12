@@ -16,8 +16,6 @@ type Props = {
 
 
 export default async function RootLayout({ children }: Props) {
-  "use server"
-
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
