@@ -5,9 +5,9 @@ import styles from "./Header.module.css"
 import {ActionIcon, Box, Burger, Button, Collapse, Flex, Paper, Stack, Text, Title, Tooltip} from "@mantine/core"
 import Link from "next/link"
 import {useMediaQuery} from "@mantine/hooks"
-import Width from "~/components/Width/Width";
-import Logo from "~/components/Logo/Logo";
-import Check from "~/components/Check/Check";
+import Width from "~/app/components/Width/Width";
+import Logo from "~/app/components/Logo/Logo";
+import Check from "~/app/components/Check/Check";
 import {IconChevronsRight} from "@tabler/icons-react";
 
 const Header: FC = () => {

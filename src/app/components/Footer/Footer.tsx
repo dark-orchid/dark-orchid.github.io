@@ -1,15 +1,21 @@
 "use client"
-import {FC}                                        from "react"
-import {Button, Divider, Flex, Stack, Text, Title} from "@mantine/core"
-import Link                                        from "next/link";
-import Width                                       from "~/components/Width/Width";
-import Logo                                        from "~/components/Logo/Logo";
 
+import {FC} from "react"
+import {Button, Divider, Flex, Stack, Text, Title, useMantineTheme} from "@mantine/core"
+import Link from "next/link";
+import Width from "~/app/components/Width/Width";
+import Logo from "~/app/components/Logo/Logo";
 
 const Footer: FC = () => {
+  const theme = useMantineTheme();
+
   return (
     <footer>
-      <Stack gap={20} w={"100%"} bg={"var(--app-theme-0)"} pt={50}>
+      <Stack
+        gap={20}
+        w={"100%"}
+        bg={theme.colors.purple[5]}
+        pt={50}>
         <Width>
           <Flex justify={{base: "center", lg: "flex-start"}} align={"center"} gap={5}>
             <Logo manualColorScheme={"light"} width={50} height={50}/>

@@ -1,8 +1,8 @@
 import {Button, Stack} from "@mantine/core";
-import BackgroundGradient from "~/components/BackgroundGradient/BackgroundGradient";
-import Header from "~/components/Header/Header";
-import Width from "~/components/Width/Width";
-import Footer from "~/components/Footer/Footer";
+import BackgroundGradient from "~/app/components/BackgroundGradient/BackgroundGradient";
+import Header from "~/app/components/Header/Header";
+import Width from "~/app/components/Width/Width";
+import Footer from "~/app/components/Footer/Footer";
 
 export default function Home() {
   return (

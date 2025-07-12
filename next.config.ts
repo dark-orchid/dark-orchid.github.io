@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
   distDir: "dist",
@@ -6,7 +7,10 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  basePath: ""
+  basePath: "",
+  pageExtensions: [ "tsx", "mdx" ]
 };
 
-export default nextConfig;
+const withMDX = createMDX({});
+
+export default withMDX(nextConfig);

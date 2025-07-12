@@ -15,15 +15,15 @@ export const zincPalette: MantineColorsTuple = [
 ];
 
 export const purplePalette: MantineColorsTuple = [
-    "#000000",
-    "#0B0019",
-    "#170033",
-    "#22004C",
-    "#2E0066",
-    "#3A0080",
-    "#450099",
-    "#5100B3",
-    "#5C00CC",
-    "#6800E6",
-    "#7300FF"
+  "#0b0019", // 950 - 0
+  "#170033",
+  "#2e0066",
+  "#450099",
+  "#5c00cc",
+  "#71717b", // 500 - 5
+  "#8f33ff",
+  "#ab66ff",
+  "#c799ff",
+  "#e3ccff",
+  "#f1e6ff" // 50 - 10
 ];
