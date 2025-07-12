@@ -4,7 +4,6 @@ import Header             from '@/components/Header/Header';
 import Width              from '@/components/Width/Width';
 import Footer             from '@/components/Footer/Footer';
 
-
 export default function Home() {
     return (
         <Stack h={"100svh"}>

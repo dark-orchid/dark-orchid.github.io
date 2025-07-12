@@ -1,14 +1,28 @@
 {
-  "name": "dark-orchid_webpage",
-  "author": "David Ax",
-  "description": "Webpage for custom Theme by Simon Kovtyk",
-  "version": "0.1.0",
+  "name": "dark-orchid.github.io",
+  "author": {
+    "name": "Dark Orchid",
+    "url": "https://github.com/dark-orchid"
+  },
+  "contributors": [
+    {
+      "name": "David Ax",
+      "url": "https://david-ax.de",
+      "email": "me@david-ax.de"
+    },
+    {
+      "name": "Simon Kovtyk",
+      "url": "https://simonkov.dev",
+      "email": "simon@kovtyk.com"
+    }
+  ],
+  "description": "A Colorscheme, that's purple.",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "@mantine/core": "^8.1.3",
@@ -20,7 +34,6 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
