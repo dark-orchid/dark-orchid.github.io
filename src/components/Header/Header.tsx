@@ -1,42 +1,42 @@
-'use client'
-import {FC, useState}                                                                        from 'react'
-import styles                                                                                from './Header.module.css'
-import {ActionIcon, Box, Burger, Button, Collapse, Flex, Paper, Stack, Text, Title, Tooltip} from '@mantine/core'
-import Link                                                                                  from 'next/link'
-import {useMediaQuery}                                                                       from '@mantine/hooks'
-import Width                                                                                 from '@/components/Width/Width';
-import Logo                                                                                  from '@/components/Logo/Logo';
-import Check                                                                                 from '@/components/Check/Check';
-import {IconChevronsRight}                                                                   from '@tabler/icons-react';
+"use client"
 
+import {FC, useState} from "react"
+import styles from "./Header.module.css"
+import {ActionIcon, Box, Burger, Button, Collapse, Flex, Paper, Stack, Text, Title, Tooltip} from "@mantine/core"
+import Link from "next/link"
+import {useMediaQuery} from "@mantine/hooks"
+import Width from "~/components/Width/Width";
+import Logo from "~/components/Logo/Logo";
+import Check from "~/components/Check/Check";
+import {IconChevronsRight} from "@tabler/icons-react";
 
 const Header: FC = () => {
-    const isMobile = useMediaQuery('(max-width: 1145px)')
-    const [menuOpened, setMenuOpened] = useState(false)
+  const isMobile = useMediaQuery("(max-width: 1145px)")
+  const [menuOpened, setMenuOpened] = useState(false)
 
-    const links = [
-        {label: 'Home', href: '/#start'},
-        {label: 'Integrations', href: '/#features'},
-        {label: 'Specification', href: '/#preise'}
-    ]
+  const links = [
+    {label: "Home", href: "/#start"},
+    {label: "Integrations", href: "/#features"},
+    {label: "Specification", href: "/#preise"}
+  ]
 
-    return (
-        <header className={styles.header}>
-            <Width>
-                <Paper
-                    style={{backdropFilter: 'blur(25px)'}}
-                    bg={'rgba(0,0,0,0.3)'}
-                    my={'20px'}
-                    px={20}
-                    py={15}
-                    radius={'xl'}
-                >
-                    <Flex gap={20} h={'100%'} justify={'space-between'} align={'center'}>
-                        <Flex justify={'flex-start'} align={'center'} gap={5}>
-                            <Logo manualColorScheme={'dark'} width={50} height={50}/>
-                            <Stack align={'flex-start'} gap={0}>
-                                <Title c={'var(--app-theme-7)'} order={2}>Dark Orchid</Title>
-                                <Text size={"sm"} c={'var(--app-theme-7)'}>A Colorscheme, that's purple.</Text>
+  return (
+    <header className={styles.header}>
+      <Width>
+        <Paper
+          style={{backdropFilter: "blur(25px)"}}
+          bg={"rgba(0,0,0,0.3)"}
+          my={"20px"}
+          px={20}
+          py={15}
+          radius={"xl"}
+        >
+          <Flex gap={20} h={"100%"} justify={"space-between"} align={"center"}>
+                        <Flex justify={"flex-start"} align={"center"} gap={5}>
+                            <Logo manualColorScheme={"dark"} width={50} height={50}/>
+                            <Stack align={"flex-start"} gap={0}>
+                                <Title c={"var(--app-theme-7)"} order={2}>Dark Orchid</Title>
+                                <Text size={"sm"} c={"var(--app-theme-7)"}>A Colorscheme, that"s purple.</Text>
                             </Stack>
                         </Flex>
                         <Check condition={isMobile}>
@@ -45,14 +45,14 @@ const Header: FC = () => {
                                 onClick={() => setMenuOpened(!menuOpened)}
                                 color="black"
                                 lineSize={2}
-                                size={'lg'}
+                                size={"lg"}
                             />
                         </Check>
                         <Check condition={!isMobile}>
-                            <Flex gap={10} justify={'center'} align={'center'}>
+                            <Flex gap={10} justify={"center"} align={"center"}>
                                 {links.map((link) => (
                                     <Link key={link.href} href={link.href} passHref>
-                                        <Button color={'var(--app-theme-7)'} variant="subtle" size="sm" fw={400}>
+                                        <Button color="zinc" variant="subtle" size="sm" fw={400}>
                                             {link.label}
                                         </Button>
                                     </Link>
@@ -88,9 +88,9 @@ const Header: FC = () => {
 
                                     <Button
                                         onClick={() => setMenuOpened(false)}
-                                        c={'black'}
+                                        c={"black"}
                                         h={35}
-                                        bg={'var(--app-theme-10)'}
+                                        bg={"var(--app-theme-10)"}
                                         variant="filled"
                                         size="xs"
                                         radius={"md"}
@@ -108,9 +108,9 @@ const Header: FC = () => {
                                     {links.map((link) => (
                                         <Link key={link.href} href={link.href} passHref>
                                             <Button
-                                                tt={'uppercase'}
+                                                tt={"uppercase"}
                                                 onClick={() => setMenuOpened(false)}
-                                                color={'dimmed'}
+                                                color={"dimmed"}
                                                 variant="subtle"
                                                 size="md"
                                                 fw={400}

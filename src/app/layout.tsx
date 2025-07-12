@@ -1,29 +1,35 @@
-import '@mantine/core/styles.css'
-import {mantineHtmlProps} from '@mantine/core'
-import '@/assets/styles/variables.css'
-import '@/assets/styles/font.css'
-import '@/assets/styles/main.css'
-
-import Mantine     from '../components/Mantine/Mantine'
-import {ReactNode} from 'react'
-
+import "@mantine/core/styles.css"
+import {ColorSchemeScript, mantineHtmlProps, MantineProvider} from "@mantine/core"
+import "~/app/assets/styles/fonts.css"
+import "~/app/assets/styles/global.css"
+import {ReactNode} from "react"
+import { theme } from "~/lib/ui/theme"
 
 export const metadata = {
-    description: 'Theme',
-    title: 'Dark-Orchid'
-
+  description: "Theme",
+  title: "Dark Orchid — A Colorscheme, that's purple."
 }
 
-export default async function RootLayout(props: { children: ReactNode }) {
-    const {children} = props
+type Props = {
+  children: ReactNode;
+}
 
-    return (
-        <html lang="de" {...mantineHtmlProps}>
-        <body>
+export default async function RootLayout({ children }: Props) {
+  return (
+    <html lang="en" {...mantineHtmlProps}>
+      <header>
+        <ColorSchemeScript defaultColorScheme="dark" />
+      </header>
+      <body>
         <main>
-            <Mantine>{children}</Mantine>
+          <MantineProvider
+            forceColorScheme="dark"
+            theme={theme}
+          >
+            {children}
+          </MantineProvider>
         </main>
-        </body>
-        </html>
-    )
+      </body>
+    </html>
+  )
 }
