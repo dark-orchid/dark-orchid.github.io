@@ -47,7 +47,7 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       
       - name: Install dependencies
-        run: pnpm run install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
         
       - name: Build with Next.js
         run: next build
