@@ -9,9 +9,10 @@
   *If you like this project, consider giving it a ⭐ to show your support!*<br/>
   *It also helps others to discover it.*
 
-  [![Last Release](https://img.shields.io/github/v/release/dark-orchid/dark-orchid.github.io?sort=semver&display_name=release&color=7300ff)](./)
-  [![GitHub License](https://img.shields.io/github/license/dark-orchid/dark-orchid.github.io?color=7300ff)](./LICENSE)
-  [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-7300ff)](./)
+  [![Last Release](https://img.shields.io/github/v/release/dark-orchid/dark-orchid.github.io?sort=semver&display_name=release&color=7300ff&labelColor=27272a)](../../releases/latest)
+  [![GitHub License](https://img.shields.io/github/license/dark-orchid/dark-orchid.github.io?color=7300ff&labelColor=27272a)](./LICENSE)
+  [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-7300ff?labelColor=27272a)](./)
+  [![Sponsor Hint](https://img.shields.io/badge/❤️-Sponsor_it-%23dc2626?style=flat&labelColor=27272a)](https://github.com/sponsors/simonkovtyk/)
 </div>
 
 ## Introduction
