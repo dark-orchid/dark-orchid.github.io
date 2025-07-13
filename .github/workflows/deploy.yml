@@ -19,7 +19,8 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
-      - name: googleapis/release-please-action@v4
+      - name: Analyze Commits
+        uses: googleapis/release-please-action@v4
         with:
           release-type: node
 
