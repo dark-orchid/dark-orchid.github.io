@@ -49,7 +49,7 @@ Reporting an issue or creating a feature request is made by creating a new issue
 You can create a [new issue here](../../issues/new).
 
 ### Pull Requests
-GitHub offers a solid guideline for contributing to open source projects through pull requests, covering key practices. These best practices provide a reliable starting point for making effective and respectful contributions.
+GitHub offers a solid guideline for contributing to open source projects through pull requests, covering key practices. These best practices provide a reliable starting point for making effective contributions.
 
 You can find the [guidelines here](https://docs.github.com/get-started/exploring-projects-on-github/contributing-to-a-project).
 
