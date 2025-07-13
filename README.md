@@ -46,7 +46,7 @@ Feel free to submit a pull request, issue or feature request or start a discussi
 ### Issues and Feature Requests
 Reporting an issue or creating a feature request is made by creating a new issue on this repository.
 
-You can create a [new issue here](../../issues/new/choose).
+You can create a [new issue or feature request here](../../issues/new/choose).
 
 ### Pull Requests
 GitHub offers a solid guideline for contributing to open source projects through pull requests, covering key practices. These best practices provide a reliable starting point for making effective contributions.
