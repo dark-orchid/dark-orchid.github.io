@@ -20,7 +20,7 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     outputs:
-      release_please: ${{ steps.release_please.outputs }}
+      should_release: ${{ steps.release_please.outputs.release_created }}
     steps:
       - name: Analyze Commits
         id: release_please
@@ -31,7 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: analyze
-    if: ${{ needs.analyze.outputs.release_please.release_created }}
+    if: ${{ needs.analyze.outputs.should_release }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
