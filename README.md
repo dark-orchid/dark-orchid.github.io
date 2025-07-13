@@ -41,11 +41,22 @@ The MIT License (MIT) - Please have a look at the [LICENSE file](./LICENSE) for 
 ## Contributing
 Contributions are always welcome and greatly appreciated. Whether you want to report a bug, suggest a new feature, or improve the documentation, your input helps make the project better for everyone.
 
-If you're unsure where to start, check the open issues for guidance. Even small contributions, such as fixing typos or improving code readability, are valuable.
+Feel free to submit a pull request, issue or feature request or start a discussion.
 
-Feel free to submit a pull request or start a discussion — we're happy to collaborate!
+### Issues and Feature Requests
+Reporting an issue or creating a feature request is made by creating a new issue on this repository.
 
----
+You can create a [new issue here](../../issues/new).
+
+### Pull Requests
+GitHub offers a solid guideline for contributing to open source projects through pull requests, covering key practices. These best practices provide a reliable starting point for making effective and respectful contributions.
+
+You can find the [guidelines here](https://docs.github.com/get-started/exploring-projects-on-github/contributing-to-a-project).
+
+### Code Of Conduct
+We are committed to keeping a welcoming, inclusive, and respectful community for everyone. To help us achieve this, we kindly ask that you adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md).
+
+## Legal
 
 All trademarks and registered trademarks mentioned are property of their respective owners and are used for identification purposes only. Use of these names does not imply endorsement or affiliation.
 
