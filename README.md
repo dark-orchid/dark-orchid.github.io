@@ -47,4 +47,8 @@ Feel free to submit a pull request or start a discussion — we're happy to coll
 
 ---
 
-© Simon Kovtyk
+All trademarks and registered trademarks mentioned are property of their respective owners and are used for identification purposes only. Use of these names does not imply endorsement or affiliation.
+
+This project ([dark-orchid.github.io](https://github.com/dark-orchid/dark-orchid.github.io)) is a trademark of [Dark Orchid](https://dark-orchid.github.io/). The MIT License does not grant rights to use the trademark without permission.
+
+© 2025 — present by The Dark Orchid Maintainers
