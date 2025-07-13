@@ -19,7 +19,8 @@ concurrency:
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    outputs: ${{ steps.release_please.outputs }}
+    outputs:
+      release_please: ${{ steps.release_please.outputs }}
     steps:
       - name: Analyze Commits
         id: release_please
@@ -30,7 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: analyze
-    if: ${{ steps.release.outputs.release_created }}
+    if: ${{ needs.analyze.outputs.release_please.release_created }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
