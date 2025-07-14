@@ -4,6 +4,7 @@ import "~/app/assets/styles/fonts.css"
 import "~/app/assets/styles/global.css"
 import {ReactNode} from "react"
 import ClientMantineProvider from "./components/mantine-provider"
+import BackgroundGradient from "./components/BackgroundGradient/BackgroundGradient"
 
 export const metadata = {
   description: "Theme",
@@ -27,11 +28,11 @@ export default async function RootLayout({ children }: Props) {
         <link rel="manifest" href="/site.webmanifest" />
         <ColorSchemeScript defaultColorScheme="dark" />
       </head>
-      <body>
+      <body style={{
+        overflow: "none"
+      }}>
         <ClientMantineProvider>
-          <main>
             {children}
-          </main>
         </ClientMantineProvider>
       </body>
     </html>

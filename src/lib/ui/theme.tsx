@@ -12,6 +12,10 @@ export const theme: object = createTheme({
                                                  purple: purplePalette
                                              },
                                              primaryColor: "purple",
+                                             primaryShade: {
+                                               light: 5,
+                                               dark: 5
+                                             },
                                              fontSizes: {
                                                  xs: "0.75rem",
                                                  sm: "0.875rem",
