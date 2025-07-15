@@ -1,4 +1,4 @@
-import { Divider, Flex, Input, Stack, Text, Title } from "@mantine/core";
+import { Divider, Flex, Input, Kbd, Stack, Text, Title } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import { routes as mainRoutes } from "../../../routes";
 import { routes } from "../../routes";
@@ -26,40 +26,42 @@ const sidebarSections = [
 export default function Sidebar () {
   return (
     <aside style={{
-      width: "700px",
+      maxWidth: "256px",
       height: "100vh",
       padding: "8px 32px",
-      boxSizing: "border-box",
-      backgroundColor: "var(--mantine-color-zinc-1)"
+      backgroundColor: "var(--mantine-color-zinc-1)",
+      flexShrink: 0
     }}>
-      <Stack gap={40}>
-      <Stack gap={20}>
-        <Flex justify="flex-start" align="center" gap={5}>
-          <Logo manualColorScheme="dark" width={50} height={50}/>
-          <Title c="var(--mantine-color-zinc-10)" order={3}>Dark Orchid</Title>
-        </Flex>
-        <Input placeholder="Search" leftSection={<IconSearch size={16}/>}/>
-        <Divider />
-      </Stack>
-      {
-        sidebarSections.map((section, index) => (
-          <Stack key={index} gap={10}>
-            <Text
-              size="md"
-              tt="uppercase"
-              fw={500}
-              c="var(--mantine-color-zinc-10)"
-            >{section.title}</Text>
-            <Stack gap={5}>
-              {
-                section.links.map((link) => (
-                  <SidebarLink key={link.href} href={link.href} label={link.label}/>
-                ))
-              }
-            </Stack>
+      <Stack>
+        <Stack gap="xl">
+          <Stack gap={20}>
+            <Flex justify="flex-start" align="center" gap={5}>
+              <Logo manualColorScheme="dark" width={50} height={50}/>
+              <Title c="var(--mantine-color-zinc-10)" order={3}>Dark Orchid</Title>
+            </Flex>
           </Stack>
-        ))
-      }
+          <Divider />
+          {
+            sidebarSections.map((section, index) => (
+              <Stack key={index} gap={10}>
+                <Text
+                  size="xs"
+                  tt="uppercase"
+                  fw={400}
+                  c="var(--mantine-color-zinc-5)"
+                >{section.title}</Text>
+                <Stack gap={5}>
+                  {
+                    section.links.map((link) => (
+                      <SidebarLink key={link.href} href={link.href} label={link.label}/>
+                    ))
+                  }
+                </Stack>
+              </Stack>
+            ))
+          }
+        </Stack>
+        <Text>Made ♥️ in Germany</Text>
       </Stack>
     </aside>
   );

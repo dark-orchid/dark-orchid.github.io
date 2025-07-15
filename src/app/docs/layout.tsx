@@ -19,7 +19,9 @@ export default function Layout ({ children }: Props) {
       height: "100vh"
     }}>
       <Sidebar />
-      <Flex direction="column">
+      <Flex direction="column" style={{
+        flexGrow: 1
+      }}>
         <Header />
         <main style={{
           overflowY: "scroll",
