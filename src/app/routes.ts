@@ -1,4 +1,6 @@
 export const routes = {
   BASE: "/",
-  DOCS: "docs"
+  DOCS: "docs",
+  LEGAL: "legal",
+  LICENSE: "license"
 }

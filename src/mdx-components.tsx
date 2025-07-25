@@ -1,14 +1,15 @@
-import { Text, Title, Code, Blockquote, Divider } from "@mantine/core"
 import type { MDXComponents } from "mdx/types"
 import Link from "next/link"
  
 export function useMDXComponents(components: MDXComponents): MDXComponents {
+  return components;
+
   return {
     em: ({ children }) => (
       <Text mb="md" fs="italic" size="md" component="em">{children}</Text>
     ),
     hr: () => (
-      <Divider mb="md" />
+      <Divider mb="xl" mt="xl" />
     ),
     a: (props) => (
       <Link {...props} />
@@ -23,7 +24,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <Blockquote mb="md" color="purple" component="blockquote">{ children }</Blockquote>
     ),
     h1: ({ children }) => (
-      <Title mb="xl" order={1} component="h1">{children}</Title>
+      <Title mb="xl"  order={1} component="h1">{children}</Title>
     ),
     h2: ({ children }) => (
       <Title mb="lg" order={2} component="h2">{children}</Title>

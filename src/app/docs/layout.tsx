@@ -1,10 +1,7 @@
 "use client"
 
-import { Flex, Text } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
 import { ReactNode } from "react";
 import Sidebar from "./components/sidebar/sidebar";
-import { Github } from "lucide-react";
 import Header from "./components/header/header";
 
 type Props = {
@@ -12,16 +9,9 @@ type Props = {
 }
 
 export default function Layout ({ children }: Props) {
-  const [opened, {toggle}] = useDisclosure();
-
   return (
-    <Flex style={{
-      height: "100vh"
-    }}>
+    <>
       <Sidebar />
-      <Flex direction="column" style={{
-        flexGrow: 1
-      }}>
         <Header />
         <main style={{
           overflowY: "scroll",
@@ -29,7 +19,6 @@ export default function Layout ({ children }: Props) {
         }}>
           {children}
         </main>
-      </Flex>
-    </Flex>
+    </>
   );
 }

@@ -1,42 +1,21 @@
+import { Palette, WholeWord, BadgeInfo, GitPullRequest } from "lucide-react"
+import { ArticleCard, ArticleCardIcon, ArticleCardContent } from "../../components/article-card/article-card.tsx"
+
 # Getting Started
 
 ---
 
-## About
-This project originated from the need for a more flexible and consistent theming system that could be applied across a wide range of applications. While existing solutions offered partial coverage, they often fell short when it came to adapting to specific design requirements or maintaining coherence across multiple contexts.
+## What is Dark Orchid?
+The Dark Orchid Theme is a cohesive visual ecosystem built around the striking color purple. Centered on the rich Dark Orchid shade, it highlights purple's depth, creativity, and elegance.
 
-The initial motivation stemmed from the desire to streamline theming workflows and reduce repetitive setup across projects, especially in environments where a shared design language is essential. Over time, this developed into a more comprehensive solution — capable of reflecting both general design principles and more opinionated stylistic preferences, without compromising scalability or maintainability.
+Through balanced contrasts and unified tones, the theme creates a bold yet harmonious aesthetic that stands out across any design.
+
+✅ Many integrations<br/>
+✅ Eye-friendly<br/>
+✅ Open-Source and well maintained<br/>
+✅ Purple (yes, that's a feature)
 
 ---
 
-## Need help?
-Having trouble or found a bug?
-Visit our support page to find the right GitHub repository and open an issue in the correct place.
+## Learn more
 
-👉 Go to our [Repository Finder](https://youtube.com)
-
-*We'll guide you to the right repository — quick and easy.*
-
-````
-// lib/getDocsPaths.ts
-
-const docsDirectory = path.join(process.cwd(), 'docs');
-
-export function getAllDocsPaths(): string[] {
-  function walkDir(dir: string): string[] {
-    return fs.readdirSync(dir).flatMap((file) => {
-      const filepath = path.join(dir, file);
-      if (fs.statSync(filepath).isDirectory()) {
-        return walkDir(filepath);
-      } else if (file.endsWith('.md') || file.endsWith('.mdx')) {
-        const relPath = path.relative(docsDirectory, filepath);
-        const withoutExt = relPath.replace(/\.(md|mdx)$/, '');
-        return [`/docs/${withoutExt.replace(/\\/g, '/')}`];
-      }
-      return [];
-    });
-  }
-
-  return walkDir(docsDirectory);
-}
-````
