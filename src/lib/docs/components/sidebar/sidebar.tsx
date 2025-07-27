@@ -1,8 +1,9 @@
 import { ReactNode } from "react";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "~/lib/shadcn/components/ui/sidebar";
-import { footerMenu, generalMenu, integrationsMenu } from "../../menu";
+import { footerMenu, generalMenu, integrationsMenu, specsMenu } from "../../menu";
 import Link from "next/link";
 import { Separator } from "~/lib/shadcn/components/ui/separator";
+import { Badge } from "~/lib/shadcn/components/ui/badge";
 
 export function AppSidebar (): ReactNode {
   const { state } = useSidebar();
@@ -38,7 +39,30 @@ export function AppSidebar (): ReactNode {
           </SidebarGroup>
           <Separator orientation="horizontal" />
           <SidebarGroup>
-            <SidebarGroupLabel>Integrations</SidebarGroupLabel>
+            <SidebarGroupLabel>Specs</SidebarGroupLabel>
+            <SidebarGroupContent>
+                {
+                  specsMenu.map((item, index) => (
+                    <SidebarMenuItem key={index}>
+                      <SidebarMenuButton asChild>
+                        <Link href={item.link}>
+                          {item.icon}
+                          <span>{ item.label }</span>
+                        </Link>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))
+                }
+            </SidebarGroupContent>
+          </SidebarGroup>
+          <Separator orientation="horizontal" />
+          <SidebarGroup>
+            <SidebarGroupLabel className="flex gap-2">
+              Integrations
+              <Badge variant="default" className="bg-purple-500">
+                <p className="text-white">20+</p>
+              </Badge>
+            </SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {
@@ -52,6 +76,10 @@ export function AppSidebar (): ReactNode {
                       </SidebarMenuButton>
                     </SidebarMenuItem>
                   ))
+                }
+                {
+                  state === "expanded" &&
+                    <Badge className="mt-2" variant="outline">More soon!</Badge>
                 }
               </SidebarMenu>
             </SidebarGroupContent>

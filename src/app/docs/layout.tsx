@@ -20,7 +20,7 @@ export default function Layout ({ children }: Props) {
         <div className="flex flex-col w-full overflow-y-hidden">
           <Header />
           <main className="h-[calc(100vh-78px)] mt-[-68px] pt-[68px] overflow-y-scroll grow flex flex-col justify-between">
-            <div className="px-12 pt-[68px] mb-12">
+            <div className="px-4 sm:px-8 md:px-[8vw] lg:px-[16vw] xl:px-[20vw] 2xl:px-[24vw] pt-[68px] mb-12">
               {children}
             </div>
             <Footer />

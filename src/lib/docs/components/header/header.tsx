@@ -8,7 +8,7 @@ import { socialMenu } from "~/lib/shared/menu";
 
 export function Header (): ReactNode {
   return (
-    <header className="bg-zinc-900/80 backdrop-blur-xl m-2 p-2 rounded-lg shadow-md flex justify-between items-center">
+    <header className="bg-zinc-900/80 backdrop-blur-xl m-2 p-2 rounded-lg shadow-md flex justify-between items-center relative z-99999">
       <div className="flex items-center gap-2">
         <SidebarTrigger />
         <Input placeholder="Search" type="text" className="w-max" />

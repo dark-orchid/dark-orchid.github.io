@@ -1,4 +1,4 @@
-import { BadgeInfoIcon, LifeBuoyIcon, ScaleIcon, ScrollTextIcon, SparklesIcon, UsersRoundIcon } from "lucide-react"
+import { AsteriskIcon, BadgeInfoIcon, LifeBuoyIcon, ScaleIcon, ScrollTextIcon, SparklesIcon, SwatchBookIcon, UsersRoundIcon } from "lucide-react"
 import { NeoVimIcon } from "../landing/icons/neovim"
 import { DiscordIcon } from "../landing/icons/discord"
 import { Menu } from "../shared/menu"
@@ -28,6 +28,19 @@ export const generalMenu: SidebarMenu[] = [
     label: "Help",
     link: "",
     icon: <LifeBuoyIcon />
+  }
+]
+
+export const specsMenu: SidebarMenu[] = [
+  {
+    label: "Palettes",
+    link: "",
+    icon: <SwatchBookIcon />
+  },
+  {
+    label: "Tokens",
+    link: "",
+    icon: <AsteriskIcon />
   }
 ]
 

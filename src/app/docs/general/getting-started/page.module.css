@@ -1,0 +1,59 @@
+.card-integrations__gradient {
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(80px);
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(34, 197, 94, 0.2) 0%,
+    rgba(34, 197, 94, 0) 100%
+  )
+}
+
+.card-palettes__gradient {
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(80px);
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(236, 72, 153, 0.3) 0%,
+    rgba(236, 72, 153, 0) 100%
+  )
+}
+
+.card-tokens__gradient {
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(80px);
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(6, 182, 212, 0.2) 0%,
+    rgba(6, 182, 212, 0) 100%
+  )
+}
+
+.card-help__gradient {
+  position: absolute;
+  overflow: visible;
+  width: 100%;
+  top: 0;
+  left: 0;
+  filter: blur(80px);
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(139, 92, 246, 0.3) 0%,
+    rgba(139, 92, 246, 0) 100%
+  )
+}

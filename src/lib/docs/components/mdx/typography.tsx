@@ -1,44 +1,46 @@
 import { ReactNode } from "react"
+import { cn } from "~/lib/shadcn/utils";
 
 type Props = {
   children: ReactNode;
+  className?: string;
 }
 
-export function TypographyH1({children}: Props) {
+export function TypographyH1({children, className}: Props) {
   return (
-    <h1 className="scroll-m-20 text-left mb-4 text-3xl font-semibold tracking-tight text-balance text-zinc-300">
+    <h1 className={cn(className, "scroll-m-20 text-left text-2xl md:text-3xl font-semibold tracking-tight text-balance text-zinc-300")}>
       {children}
     </h1>
   )
 }
 
-export function TypographyH2({children}: Props) {
+export function TypographyH2({children, className}: Props) {
   return (
-    <h2 className="scroll-m-20 mb-4 text-2xl text-left font-semibold tracking-tight text-zinc-300">
+    <h2 className={cn(className, "scroll-m-20 text-2xl text-left font-semibold tracking-tight text-zinc-300")}>
       {children}
     </h2>
   )
 }
 
-export function TypographyH3({ children }: Props) {
+export function TypographyH3({ children, className }: Props) {
   return (
-    <h3 className="scroll-m-20 mb-2 text-2xl text-left font-semibold tracking-tight text-zinc-300">
+    <h3 className={cn(className, "scroll-m-20 text-2xl text-left font-semibold tracking-tight text-zinc-300")}>
       {children}
     </h3>
   )
 }
 
-export function TypographyH4({ children }: Props) {
+export function TypographyH4({ children, className }: Props) {
   return (
-    <h4 className="scroll-m-20 mb-1 text-xl text-left font-medium tracking-tight text-zinc-300">
+    <h4 className={cn(className, "scroll-m-20 text-xl text-left font-medium tracking-tight text-zinc-300")}>
       {children}
     </h4>
   )
 }
 
-export function TypographyP({children}: Props) {
+export function TypographyP({children, className}: Props) {
   return (
-    <p className="leading-7 [&:not(:last-child)]:mb-4 text-left text-md text-zinc-300">
+    <p className={cn(className, "leading-4 md:leading-7 [&:not(:first-child)]:mt-2 text-left md:text-md text-sm text-muted-foreground")}>
       {children}
     </p>
   )
