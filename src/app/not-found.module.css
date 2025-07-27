@@ -1,0 +1,14 @@
+.gradient__container {
+  position: absolute;
+  width: 100%;
+  filter: blur(80px);
+  left: 0;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(138, 43, 226, 0.3) 0%,
+    rgba(138, 43, 226, 0) 100%
+  )
+}

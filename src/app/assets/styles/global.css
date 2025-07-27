@@ -1,8 +1,8 @@
 body {
-    background-color: var(--mantine-color-zinc-0);
+  height: 100vh;
 }
 
 .next-page-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
