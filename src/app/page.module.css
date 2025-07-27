@@ -32,15 +32,23 @@
 
 .bento__container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-flow: dense;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+  .bento__container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-auto-flow: row dense;
+  }
 }
 
 .bento__item {
   position: absolute;
   overflow: visible;
   left: 0;
-  bottom: -16px;
+  bottom: 0;
   width: 100%;
   filter: blur(16px);
   z-index: -1;
@@ -82,8 +90,15 @@
 
 .integration__bento-item {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+}
+
+@media (min-width: 768px) {
+  .integration__bento-item {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
 }
 
 .integration__gradient {
@@ -136,7 +151,7 @@
   background: radial-gradient(
     50% 50% at 50% 50%,
     rgba(63, 81, 255, 0) 0%,
-    rgba(63, 81, 255, 1) 100%
+    rgba(63, 81, 255, 0.5) 100%
   )
 }
 

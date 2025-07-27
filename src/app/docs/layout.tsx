@@ -1,8 +1,9 @@
 "use client"
 
 import { ReactNode } from "react";
-import Sidebar from "./components/sidebar/sidebar";
-import Header from "./components/header/header";
+import { Header } from "~/lib/docs/components/header/header";
+import { AppSidebar } from "~/lib/docs/components/sidebar/sidebar";
+import { SidebarProvider } from "~/lib/shadcn/components/ui/sidebar";
 
 type Props = {
   children: ReactNode;
@@ -11,14 +12,18 @@ type Props = {
 export default function Layout ({ children }: Props) {
   return (
     <>
-      <Sidebar />
-        <Header />
-        <main style={{
-          overflowY: "scroll",
-          padding: "32px"
-        }}>
-          {children}
-        </main>
+      <SidebarProvider>
+        <AppSidebar />
+        <div className="flex flex-col">
+          <Header />
+          <main style={{
+            overflowY: "scroll",
+            padding: "32px"
+          }}>
+            {children}
+          </main>
+        </div>
+      </SidebarProvider>
     </>
   );
 }
