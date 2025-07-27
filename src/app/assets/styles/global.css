@@ -1,3 +1,8 @@
 body {
-  font-family: "Noto Sans";
+    background-color: var(--mantine-color-zinc-0);
 }
+
+.next-page-link {
+    text-decoration: none;
+}
+
