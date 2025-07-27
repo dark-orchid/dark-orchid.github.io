@@ -1,59 +1,58 @@
-import { BadgeInfoIcon, CopyrightIcon, LifeBuoyIcon, ScaleIcon, SparklesIcon, UserRoundIcon } from "lucide-react"
-import { ReactNode } from "react"
+import { BadgeInfoIcon, LifeBuoyIcon, ScaleIcon, ScrollTextIcon, SparklesIcon, UsersRoundIcon } from "lucide-react"
 import { NeoVimIcon } from "../landing/icons/neovim"
 import { DiscordIcon } from "../landing/icons/discord"
+import { Menu } from "../shared/menu"
+import { ReactNode } from "react"
 
-type MenuItem = {
-  title: string,
-  url: string,
+type SidebarMenu = Menu & {
   icon: ReactNode
 }
 
-export const generalMenu: MenuItem[] = [
+export const generalMenu: SidebarMenu[] = [
   {
-    title: "Getting Started",
-    url: "",
+    label: "Getting Started",
+    link: "",
     icon: <SparklesIcon />
   },
   {
-    title: "About",
-    url: "",
+    label: "About",
+    link: "",
     icon: <BadgeInfoIcon />
   },
   {
-    title: "Maintainers",
-    url: "",
-    icon: <UserRoundIcon />
+    label: "Maintainers",
+    link: "",
+    icon: <UsersRoundIcon />
   },
   {
-    title: "Help",
-    url: "",
+    label: "Help",
+    link: "",
     icon: <LifeBuoyIcon />
   }
 ]
 
-export const integrationsMenu: MenuItem[] = [
+export const integrationsMenu: SidebarMenu[] = [
   {
-    title: "NeoVim",
-    url: "",
+    label: "NeoVim",
+    link: "",
     icon: <NeoVimIcon color="#f4f4f5" />
   },
   {
-    title: "Discord",
-    url: "",
+    label: "Discord",
+    link: "",
     icon: <DiscordIcon color="#f4f4f5" />
   }
 ]
 
-export const footerMenu: MenuItem[] = [
+export const footerMenu: SidebarMenu[] = [
   {
-    title: "License",
-    url: "",
-    icon: <ScaleIcon />
+    label: "Disclaimer",
+    link: "",
+    icon: <ScrollTextIcon />
   },
   {
-    title: "Legal",
-    url: "",
-    icon: <CopyrightIcon />
+    label: "License",
+    link: "",
+    icon: <ScaleIcon />
   }
 ]

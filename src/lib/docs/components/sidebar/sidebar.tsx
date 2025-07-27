@@ -1,17 +1,19 @@
 import { ReactNode } from "react";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "~/lib/shadcn/components/ui/sidebar";
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "~/lib/shadcn/components/ui/sidebar";
 import { footerMenu, generalMenu, integrationsMenu } from "../../menu";
 import Link from "next/link";
 import { Separator } from "~/lib/shadcn/components/ui/separator";
 
 export function AppSidebar (): ReactNode {
+  const { state } = useSidebar();
+
   return (
     <>
-      <Sidebar className="border-none" variant="floating">
+      <Sidebar className="border-none" variant="floating" collapsible="icon">
         <SidebarHeader>
-          <Link href="/" className="flex items-center space-x-1">
-            <img src="/images/196x196.png" className="w-12" />
-            <span className="text-xl text-foreground font-medium">Dark Orchid</span>
+          <Link href="/docs" className="flex items-center space-x-1">
+              <img src="/images/196x196.png" className="w-12" />
+              <span className={(state === "expanded" ? "block" : "hidden") + " text-xl text-nowrap text-foreground font-medium"}>Dark Orchid</span>
           </Link>
         </SidebarHeader>
         <SidebarContent>
@@ -23,9 +25,9 @@ export function AppSidebar (): ReactNode {
                   generalMenu.map((item, index) => (
                     <SidebarMenuItem key={index}>
                       <SidebarMenuButton asChild>
-                        <Link href={item.url}>
+                        <Link href={item.link}>
                           {item.icon}
-                          <span>{ item.title }</span>
+                          <span>{ item.label }</span>
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -43,9 +45,9 @@ export function AppSidebar (): ReactNode {
                   integrationsMenu.map((item, index) => (
                     <SidebarMenuItem key={index}>
                       <SidebarMenuButton asChild>
-                        <Link href={item.url}>
+                        <Link href={item.link}>
                           {item.icon}
-                          <span>{ item.title }</span>
+                          <span>{ item.label }</span>
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -55,6 +57,7 @@ export function AppSidebar (): ReactNode {
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
+        <Separator orientation="horizontal" />
         <SidebarFooter>
           <SidebarGroup>
             <SidebarGroupLabel>Legal</SidebarGroupLabel>
@@ -64,9 +67,9 @@ export function AppSidebar (): ReactNode {
                   footerMenu.map((item, index) => (
                     <SidebarMenuItem key={index}>
                       <SidebarMenuButton asChild>
-                        <Link href={item.url}>
+                        <Link href={item.link}>
                           {item.icon}
-                          <span>{item.title}</span>
+                          <span>{item.label}</span>
                         </Link>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
