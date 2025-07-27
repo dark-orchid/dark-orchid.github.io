@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/dark-orchid/dark-orchid.github.io/compare/v1.1.0...v1.1.1) (2025-07-27)
+
+
+### Bug Fixes
+
+* mdx-mapping ([f92c267](https://github.com/dark-orchid/dark-orchid.github.io/commit/f92c2677e8f8cae2ef593e27e0c6dd3657e5e740))
+
 ## [1.1.0](https://github.com/dark-orchid/dark-orchid.github.io/compare/v1.0.0...v1.1.0) (2025-07-27)
 
 
