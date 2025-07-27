@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2025-07-27)
+
+
+### Features
+
+* create design ([#5](https://github.com/dark-orchid/dark-orchid.github.io/issues/5)) ([#6](https://github.com/dark-orchid/dark-orchid.github.io/issues/6)) ([f4e8c30](https://github.com/dark-orchid/dark-orchid.github.io/commit/f4e8c3001920e54c6ba8b4224f5ba3058f5f0444))
+
 ## 1.0.0 (2025-07-13)
 
 
