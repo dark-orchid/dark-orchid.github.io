@@ -9,6 +9,7 @@ import { DiscordIcon } from "~/lib/landing/icons/discord";
 import { SpotifyIcon } from "~/lib/landing/icons/spotify";
 import { HyprlandIcon } from "~/lib/landing/icons/hyprland";
 import { WeztermIcon } from "~/lib/landing/icons/wezterm";
+import { ROUTES } from "~/lib/shared/routes";
 
 export default function Home() {
   return (
@@ -24,12 +25,14 @@ export default function Home() {
           </h1>
           <p className="text-sm text-center text-muted-foreground sm:mb-16 mb-8">Dark Orchid is a cohesive visual ecosystem built around the striking color purple.</p>
           <div className="flex gap-4 flex-wrap">
-            <Button className="bg-purple-500 text-zinc-100 hover:text-purple-400 transition-colors">
-              <SparklesIcon />
-              Get Started
-            </Button>
-            <Link href="https://github.com/dark-orchid" target="_blank" passHref>
-              <Button rel="nofollow" variant="outline" className="h-full">
+            <Link href={ [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.GENERAL.BASE, "/", ROUTES.DOCS.GENERAL.GETTING_STARTED ].join("") } passHref>
+              <Button className="bg-purple-500 text-zinc-100 hover:text-purple-400 transition-colors">
+                <SparklesIcon />
+                Get Started
+              </Button>
+            </Link>
+            <Link href="https://github.com/dark-orchid" target="_blank" passHref rel="nofollow">
+              <Button variant="outline" className="h-full">
                 <GithubIcon />
                 GitHub
               </Button>
@@ -100,7 +103,7 @@ export default function Home() {
             <br/><br/>
             As a commitment to the developer community, Dark Orchid ensures full access to its source code, allowing unrestricted use, continuous availability, and the freedom to contribute and innovate without limitations.
           </p>
-          <Link href="" passHref>
+          <Link href={ [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.GENERAL.BASE, "/", ROUTES.DOCS.GENERAL.CONTRIBUTIONS ].join("") } passHref>
             <Button variant="outline">
               <PartyPopperIcon />
               Read our contribution guidelines

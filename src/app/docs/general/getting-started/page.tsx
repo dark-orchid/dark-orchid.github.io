@@ -1,4 +1,4 @@
-import { Card, CardContent, CardTitle } from "~lib/shadcn/components/ui/card";
+import { Card, CardContent } from "~lib/shadcn/components/ui/card";
 import { BlocksIcon, SwatchBookIcon, AsteriskIcon, LifeBuoyIcon, CheckIcon } from "lucide-react";
 import { Separator } from "~lib/shadcn/components/ui/separator";
 import { Badge } from "~lib/shadcn/components/ui/badge";

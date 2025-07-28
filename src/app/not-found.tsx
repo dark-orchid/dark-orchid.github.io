@@ -5,6 +5,7 @@ import { TypographyH1, TypographyP } from "~/lib/docs/components/mdx/typography"
 import { Button } from "~/lib/shadcn/components/ui/button";
 import { Card, CardContent } from "~/lib/shadcn/components/ui/card";
 import styles from "./not-found.module.css";
+import { ROUTES } from "~/lib/shared/routes";
 
 export default function NotFoundPage (): ReactNode {
   return (
@@ -26,7 +27,7 @@ export default function NotFoundPage (): ReactNode {
               <br/>
               It might have been moved, deleted, or never existed.
             </TypographyP>
-            <Link href="" passHref>
+            <Link href={ [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.GENERAL.BASE, "/", ROUTES.DOCS.GENERAL.GETTING_STARTED ].join("") } passHref>
               <Button>
                 <Undo2Icon />
                 <span>Go back to Docs</span>

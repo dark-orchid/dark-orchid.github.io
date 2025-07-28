@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { Fragment, ReactNode } from "react";
 import Link from "next/link";
 import { Separator } from "~/lib/shadcn/components/ui/separator";
 import { Button } from "~/lib/shadcn/components/ui/button";
@@ -10,7 +10,7 @@ export function Footer (): ReactNode {
       <div className="flex gap-4 items-center mb-2 sm:mb-4">
         {
           footerMenu.map((item, index) => (
-            <>
+            <Fragment key={index}>
               <Link href={item.link} passHref>
                 <Button key={index} variant="ghost" className="text-muted-foreground">
                     {item.label}
@@ -20,7 +20,7 @@ export function Footer (): ReactNode {
                 index !== footerMenu.length - 1 &&
                   <Separator orientation="vertical" className="h-4! hover:text-purple-400 transition-colors" />
               }
-            </>
+            </Fragment>
           ))
         }
       </div>

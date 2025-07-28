@@ -16,7 +16,7 @@ export function TypographyH1({children, className}: Props) {
 
 export function TypographyH2({children, className}: Props) {
   return (
-    <h2 className={cn(className, "scroll-m-20 text-2xl text-left font-semibold tracking-tight text-zinc-300")}>
+    <h2 className={cn(className, "scroll-m-20 text-2xl text-left mt-4 md:mt-6 font-semibold tracking-tight text-zinc-300")}>
       {children}
     </h2>
   )
@@ -40,7 +40,7 @@ export function TypographyH4({ children, className }: Props) {
 
 export function TypographyP({children, className}: Props) {
   return (
-    <p className={cn(className, "leading-4 md:leading-7 [&:not(:first-child)]:mt-2 text-left md:text-md text-sm text-muted-foreground")}>
+    <p className={cn(className, "leading-4 md:leading-7 [&:not(:first-child)]:mt-2 md:[&:not(:first-child)]:mt-4 text-left md:text-md text-sm text-muted-foreground")}>
       {children}
     </p>
   )

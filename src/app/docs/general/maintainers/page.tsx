@@ -11,8 +11,8 @@ export default function Page () {
     <>
       <TypographyH1>Maintainers</TypographyH1>
       <TypographyP>Meet the people currently maintaining and supporting this project.</TypographyP>
-      <div className="grid grid-cols-3 gap-4">
-        <Link href="https://github.com/simonkovtyk" passHref target="_blank">
+      <div className="grid xl:grid-cols-3 grid-cols-1 gap-y-2 xl:gap-y-0 xl:gap-4 mt-4 md:mt-6">
+        <Link href="https://github.com/simonkovtyk" passHref target="_blank" className="w-full">
           <Card>
             <CardContent className="flex items-center gap-2">
               <img src="https://avatars.githubusercontent.com/u/118692651" width="48" height="48" className="rounded-sm" />
@@ -23,7 +23,7 @@ export default function Page () {
             </CardContent>
           </Card>
         </Link>
-        <Card className="col-span-2">
+        <Card className="col-span-2 w-full">
           <CardContent>
             <CardTitle className="mb-2">Become a Maintainer</CardTitle>
             <p className="mb-4">Help shape the future of this project by joining the maintainer team. Contribute, collaborate, and make a lasting impact.</p>

@@ -4,6 +4,7 @@ import { footerMenu, generalMenu, integrationsMenu, specsMenu } from "../../menu
 import Link from "next/link";
 import { Separator } from "~/lib/shadcn/components/ui/separator";
 import { Badge } from "~/lib/shadcn/components/ui/badge";
+import { ROUTES } from "~/lib/shared/routes";
 
 export function AppSidebar (): ReactNode {
   const { state } = useSidebar();
@@ -12,7 +13,7 @@ export function AppSidebar (): ReactNode {
     <>
       <Sidebar className="border-none" variant="floating" collapsible="icon">
         <SidebarHeader>
-          <Link href="/docs" className="flex items-center space-x-1">
+          <Link href={ [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.GENERAL.BASE, "/", ROUTES.DOCS.GENERAL.GETTING_STARTED ].join("") } className="flex items-center space-x-1">
               <img src="/images/196x196.png" className="w-12" />
               <span className={(state === "expanded" ? "block" : "hidden") + " text-xl text-nowrap text-foreground font-medium"}>Dark Orchid</span>
           </Link>

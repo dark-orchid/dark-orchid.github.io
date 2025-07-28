@@ -5,7 +5,7 @@ import { TypographyH1, TypographyH2, TypographyH3, TypographyH4, TypographyP } f
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     hr: () => (
-      <Separator orientation="horizontal" className="mb-4" />
+      <Separator orientation="horizontal" className="mt-6 md:mt-8" />
     ),
     h1: ({ children }) => (
       <TypographyH1>{children}</TypographyH1>

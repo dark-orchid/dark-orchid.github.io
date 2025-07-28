@@ -1,23 +1,20 @@
 import { Menu } from "../shared/menu"
+import { ROUTES } from "../shared/routes"
 
 export const navMenu: Menu[] = [
   {
-    link: "",
+    link: [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.GENERAL.BASE, "/", ROUTES.DOCS.GENERAL.GETTING_STARTED ].join(""),
     label: "Getting Started"
-  },
-  {
-    link: "",
-    label: "Docs"
   }
 ]
 
 export const footerMenu: Menu[] = [
   {
     label: "Disclaimer",
-    link: ""
+    link: [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.LEGAL.BASE, "/", ROUTES.DOCS.LEGAL.DISCLAIMER ].join("")
   },
   {
     label: "License",
-    link: ""
+    link: [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.LEGAL.BASE, "/", ROUTES.DOCS.LEGAL.LICENSE ].join("")
   }
 ]
