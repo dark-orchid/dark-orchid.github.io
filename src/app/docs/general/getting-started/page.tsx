@@ -5,7 +5,7 @@ import { Badge } from "~lib/shadcn/components/ui/badge";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { TypographyH1, TypographyH2, TypographyP } from "~/lib/docs/components/mdx/typography";
-import styles from "./page.module.css";
+import { RadialGradient } from "~/lib/components/radial-gradient/radial-gradient";
 
 export default function Page (): ReactNode {
   return (
@@ -20,7 +20,15 @@ export default function Page (): ReactNode {
       <div className="grid md:grid-cols-2 grid-flow-dense gap-2 md:gap-4 mb-16">
         <Link href="" passHref>
           <Card className="h-full overflow-hidden relative">
-            <div className={styles["card-integrations__gradient"]}></div>
+            <RadialGradient
+              overlay
+              className="blur-3xl"
+              colors={[[
+                "50% 50% at 50% 50%",
+                "rgba(34, 197, 94, 0.2) 0%",
+                "rgba(34, 197, 94, 0) 100%"
+              ]]}
+            />
             <CardContent>
               <div className="w-10 h-10 mb-4 rounded-md p-1 bg-green-950 flex items-center justify-center">
                 <BlocksIcon className="text-green-500" size={20} />
@@ -32,7 +40,15 @@ export default function Page (): ReactNode {
         </Link>
         <Link href="" passHref>
           <Card className="h-full overflow-hidden relative">
-            <div className={styles["card-palettes__gradient"]}></div>
+            <RadialGradient
+              overlay
+              className="blur-3xl"
+              colors={[[
+                "50% 50% at 50% 50%",
+                "rgba(236, 72, 153, 0.3) 0%",
+                "rgba(236, 72, 153, 0) 100%"
+              ]]}
+            />
             <CardContent>
               <div className="w-10 h-10 mb-4 rounded-md p-1 bg-pink-950 flex items-center justify-center">
                 <SwatchBookIcon className="text-pink-500" size={20} />
@@ -44,7 +60,15 @@ export default function Page (): ReactNode {
         </Link>
         <Link href="" passHref>
           <Card className="h-full overflow-hidden relative">
-            <div className={styles["card-tokens__gradient"]}></div>
+            <RadialGradient
+              overlay
+              className="blur-3xl"
+              colors={[[
+                "50% 50% at 50% 50%",
+                "rgba(6, 182, 212, 0.2) 0%",
+                "rgba(6, 182, 212, 0) 100%"
+              ]]}
+            />
             <CardContent>
               <div className="w-10 h-10 mb-4 rounded-md p-1 bg-cyan-950 flex items-center justify-center">
                 <AsteriskIcon className="text-cyan-500" size={20} />
@@ -56,7 +80,15 @@ export default function Page (): ReactNode {
         </Link>
         <Link href="" passHref>
           <Card className="h-full overflow-hidden relative">
-            <div className={styles["card-help__gradient"]}></div>
+            <RadialGradient
+              overlay
+              className="blur-3xl"
+              colors={[[
+                "50% 50% at 50% 50%",
+                "rgba(139, 92, 246, 0.3) 0%",
+                "rgba(139, 92, 246, 0) 100%"
+              ]]}
+            />
             <CardContent>
               <div className="w-10 h-10 mb-4 rounded-md p-1 bg-violet-950 flex items-center justify-center">
                 <LifeBuoyIcon className="text-violet-500" size={20} />
@@ -84,13 +116,13 @@ export default function Page (): ReactNode {
           </Badge>
           <Badge variant="outline">
             <CheckIcon className="text-zinc-300" />
-            <p className="text-zinc-300">Open-Source and well maintained</p>
+            <p className="text-zinc-300">Open-Source</p>
           </Badge>
           <Badge variant="outline">
             <CheckIcon className="text-zinc-300" />
-            <p className="text-zinc-300">Purple (yes, that's a feature)</p>
+            <p className="text-zinc-300">Well maintained</p>
           </Badge>
-          </div>
+        </div>
       </div>
     </>
   )

@@ -23,6 +23,7 @@ export const ROUTES = {
     LEGAL: {
       BASE: "legal",
       DISCLAIMER: "disclaimer",
+      CODE_OF_CONDUCT: "code-of-conduct",
       LICENSE: "license"
     }
   }

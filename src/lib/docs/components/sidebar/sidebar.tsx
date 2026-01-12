@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Separator } from "~/lib/shadcn/components/ui/separator";
 import { Badge } from "~/lib/shadcn/components/ui/badge";
 import { ROUTES } from "~/lib/shared/routes";
+import { Tooltip, TooltipContent, TooltipTrigger } from "~/lib/shadcn/components/ui/tooltip";
 
 export function AppSidebar (): ReactNode {
   const { state } = useSidebar();
@@ -26,12 +27,31 @@ export function AppSidebar (): ReactNode {
                 {
                   generalMenu.map((item, index) => (
                     <SidebarMenuItem key={index}>
-                      <SidebarMenuButton asChild>
-                        <Link href={item.link}>
-                          {item.icon}
-                          <span>{ item.label }</span>
-                        </Link>
-                      </SidebarMenuButton>
+                      {
+                        state === "collapsed"
+                          ? (
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <SidebarMenuButton asChild>
+                                  <Link href={item.link}>
+                                    {item.icon}
+                                    <span>{ item.label }</span>
+                                  </Link>
+                                </SidebarMenuButton>
+                              </TooltipTrigger>
+                              <TooltipContent side="right">
+                                { item.label }
+                              </TooltipContent>
+                            </Tooltip>
+                          ) : (
+                            <SidebarMenuButton asChild>
+                              <Link href={item.link}>
+                                {item.icon}
+                                <span>{ item.label }</span>
+                              </Link>
+                            </SidebarMenuButton>
+                          )
+                      }
                     </SidebarMenuItem>
                   ))
                 }
@@ -45,12 +65,31 @@ export function AppSidebar (): ReactNode {
                 {
                   specsMenu.map((item, index) => (
                     <SidebarMenuItem key={index}>
-                      <SidebarMenuButton asChild>
-                        <Link href={item.link}>
-                          {item.icon}
-                          <span>{ item.label }</span>
-                        </Link>
-                      </SidebarMenuButton>
+                      {
+                        state === "collapsed"
+                          ? (
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <SidebarMenuButton asChild>
+                                  <Link href={item.link}>
+                                    {item.icon}
+                                    <span>{ item.label }</span>
+                                  </Link>
+                                </SidebarMenuButton>
+                              </TooltipTrigger>
+                              <TooltipContent side="right">
+                                { item.label }
+                              </TooltipContent>
+                            </Tooltip>
+                          ) : (
+                            <SidebarMenuButton asChild>
+                              <Link href={item.link}>
+                                {item.icon}
+                                <span>{ item.label }</span>
+                              </Link>
+                            </SidebarMenuButton>
+                          )
+                      }
                     </SidebarMenuItem>
                   ))
                 }
@@ -60,8 +99,8 @@ export function AppSidebar (): ReactNode {
           <SidebarGroup>
             <SidebarGroupLabel className="flex gap-2">
               Integrations
-              <Badge variant="default" className="bg-purple-500">
-                <p className="text-white">20+</p>
+              <Badge variant="outline">
+                20+
               </Badge>
             </SidebarGroupLabel>
             <SidebarGroupContent>
@@ -69,12 +108,31 @@ export function AppSidebar (): ReactNode {
                 {
                   integrationsMenu.map((item, index) => (
                     <SidebarMenuItem key={index}>
-                      <SidebarMenuButton asChild>
-                        <Link href={item.link}>
-                          {item.icon}
-                          <span>{ item.label }</span>
-                        </Link>
-                      </SidebarMenuButton>
+                      {
+                        state === "collapsed"
+                          ? (
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <SidebarMenuButton asChild>
+                                  <Link href={item.link}>
+                                    {item.icon}
+                                    <span>{ item.label }</span>
+                                  </Link>
+                                </SidebarMenuButton>
+                              </TooltipTrigger>
+                              <TooltipContent side="right">
+                                { item.label }
+                              </TooltipContent>
+                            </Tooltip>
+                          ) : (
+                            <SidebarMenuButton asChild>
+                              <Link href={item.link}>
+                                {item.icon}
+                                <span>{ item.label }</span>
+                              </Link>
+                            </SidebarMenuButton>
+                          )
+                      }
                     </SidebarMenuItem>
                   ))
                 }
@@ -95,12 +153,31 @@ export function AppSidebar (): ReactNode {
                 {
                   footerMenu.map((item, index) => (
                     <SidebarMenuItem key={index}>
-                      <SidebarMenuButton asChild>
-                        <Link href={item.link}>
-                          {item.icon}
-                          <span>{item.label}</span>
-                        </Link>
-                      </SidebarMenuButton>
+                      {
+                        state === "collapsed"
+                          ? (
+                            <Tooltip>
+                              <TooltipTrigger asChild>
+                                <SidebarMenuButton asChild>
+                                  <Link href={item.link}>
+                                    {item.icon}
+                                    <span>{ item.label }</span>
+                                  </Link>
+                                </SidebarMenuButton>
+                              </TooltipTrigger>
+                              <TooltipContent side="right">
+                                { item.label }
+                              </TooltipContent>
+                            </Tooltip>
+                          ) : (
+                            <SidebarMenuButton asChild>
+                              <Link href={item.link}>
+                                {item.icon}
+                                <span>{item.label}</span>
+                              </Link>
+                            </SidebarMenuButton>
+                          )
+                      }
                     </SidebarMenuItem>
                   ))
                 }

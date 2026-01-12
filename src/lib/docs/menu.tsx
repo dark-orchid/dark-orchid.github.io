@@ -1,4 +1,4 @@
-import { AsteriskIcon, BadgeInfoIcon, GitPullRequestArrowIcon, LifeBuoyIcon, ScaleIcon, ScrollTextIcon, SparklesIcon, SwatchBookIcon, UsersRoundIcon } from "lucide-react"
+import { AsteriskIcon, BadgeInfoIcon, GitPullRequestArrowIcon, LifeBuoyIcon, ScaleIcon, ScrollTextIcon, ShieldIcon, SparklesIcon, SwatchBookIcon, UsersRoundIcon } from "lucide-react"
 import { NeoVimIcon } from "../landing/icons/neovim"
 import { DiscordIcon } from "../landing/icons/discord"
 import { Menu } from "../shared/menu"
@@ -64,6 +64,11 @@ export const integrationsMenu: SidebarMenu[] = [
 ]
 
 export const footerMenu: SidebarMenu[] = [
+  {
+    label: "Code of Conduct",
+    link: [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.LEGAL.BASE, "/", ROUTES.DOCS.LEGAL.CODE_OF_CONDUCT ].join(""),
+    icon: <ShieldIcon />
+  },
   {
     label: "Disclaimer",
     link: [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.LEGAL.BASE, "/", ROUTES.DOCS.LEGAL.DISCLAIMER ].join(""),

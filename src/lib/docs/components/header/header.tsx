@@ -1,7 +1,5 @@
-import { GithubIcon } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { Button } from "~/lib/shadcn/components/ui/button";
 import { Input } from "~/lib/shadcn/components/ui/input";
 import { SidebarTrigger } from "~/lib/shadcn/components/ui/sidebar";
 import { socialMenu } from "~/lib/shared/menu";
@@ -13,13 +11,13 @@ export function Header (): ReactNode {
         <SidebarTrigger />
         <Input placeholder="Search" type="text" className="w-max" />
       </div>
-      <nav>
+      <nav
+        className="space-x-2"
+      >
         {
           socialMenu.map((item, index) => (
             <Link href={item.link} passHref key={index} target="_blank" rel="nofollow">
-              <Button variant="ghost">
-                {item.label}
-              </Button>
+              {item.label}
             </Link>
           ))
         }

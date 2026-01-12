@@ -7,7 +7,7 @@ import { footerMenu } from "../../menu";
 export function Footer (): ReactNode {
   return (
     <footer className="bg-zinc-900 py-6 flex flex-col items-center justify-center px-4 gap-2 rounded-t-xl">
-      <div className="flex gap-4 items-center mb-2 sm:mb-4">
+      <div className="flex gap-4 items-center mb-2">
         {
           footerMenu.map((item, index) => (
             <Fragment key={index}>

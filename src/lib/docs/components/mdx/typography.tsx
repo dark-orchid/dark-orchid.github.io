@@ -40,7 +40,7 @@ export function TypographyH4({ children, className }: Props) {
 
 export function TypographyP({children, className}: Props) {
   return (
-    <p className={cn(className, "leading-4 md:leading-7 [&:not(:first-child)]:mt-2 md:[&:not(:first-child)]:mt-4 text-left md:text-md text-sm text-muted-foreground")}>
+    <p className={cn("leading-4 md:leading-7 not-first:mt-2 md:not-first:mt-4 text-left text-md text-muted-foreground", className)}>
       {children}
     </p>
   )
@@ -55,16 +55,16 @@ export function TypographyBlockquote({children}: Props) {
 }
 
 export function TypographyList({children}: Props) {
-  const realChildren = Array.isArray(children) ? children : [children];
-
   return (
-    <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-      {
-        realChildren.map((item, index) => (
-          <li key={index}>{item}</li>
-        ))
-      }
+    <ul className="my-6 ml-6 list-disc! [&>li]:mt-2">
+      {children}
     </ul>
+  )
+}
+
+export function TypographyListItem({children}: Props) {
+  return (
+    <li className="text-muted-foreground">{children}</li>
   )
 }
 
