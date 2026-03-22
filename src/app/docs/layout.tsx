@@ -2,9 +2,8 @@
 
 import { ReactNode } from "react";
 import { Header } from "~/lib/docs/components/header/header";
-import { AppSidebar } from "~/lib/docs/components/sidebar/sidebar";
+import { Sidebar } from "~/lib/docs/components/sidebar/sidebar";
 import { SidebarProvider } from "~/lib/shadcn/components/ui/sidebar";
-import styles from "./layout.module.css";
 import { Footer } from "~/lib/docs/components/footer/footer";
 
 type Props = {
@@ -13,14 +12,13 @@ type Props = {
 
 export default function Layout ({ children }: Props) {
   return (
-    <div>
-      <div className={ styles.gradient }></div>
+    <div className="bg-zinc-900">
       <SidebarProvider>
-        <AppSidebar />
+        <Sidebar />
         <div className="flex flex-col w-full overflow-y-hidden">
           <Header />
-          <main className="h-[calc(100vh-78px)] mt-[-68px] pt-[68px] overflow-y-scroll grow flex flex-col justify-between">
-            <div className="px-4 md:px-[2vw] lg:px-[6vw] pt-[68px] mb-12">
+          <main className="h-[calc(100vh-78px)] -mt-17 pt-17 overflow-y-scroll grow flex flex-col justify-between">
+            <div className="m-16">
               {children}
             </div>
             <Footer />

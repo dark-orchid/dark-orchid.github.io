@@ -1,12 +1,11 @@
 import { Undo2Icon } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { TypographyH1, TypographyP } from "~/lib/docs/components/mdx/typography";
+import { TypographyH1, TypographyP } from "~lib/components/typography/typography";
 import { Button } from "~/lib/shadcn/components/ui/button";
 import { Card, CardContent } from "~/lib/shadcn/components/ui/card";
-import styles from "./not-found.module.css";
-import { ROUTES } from "~/lib/shared/routes";
 import { RadialGradient } from "~/lib/components/radial-gradient/radial-gradient";
+import { routes } from "~/lib/shared/routes";
 
 export default function NotFoundPage (): ReactNode {
   return (
@@ -36,7 +35,7 @@ export default function NotFoundPage (): ReactNode {
             <TypographyP className="mb-6">
               It might have been moved, deleted, or never existed.
             </TypographyP>
-            <Link href={ [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.GENERAL.BASE, "/", ROUTES.DOCS.GENERAL.GETTING_STARTED ].join("") } passHref>
+            <Link href={ [ routes.base, routes.docs.base, routes.docs.general.base, routes.docs.general.gettingStarted].join("/") } passHref>
               <Button size="sm">
                 <Undo2Icon />
                 Back to Docs

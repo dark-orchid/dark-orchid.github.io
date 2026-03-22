@@ -1,4 +1,4 @@
-export const palettesShades = [
+const palettesShades = [
   "50",
   "100",
   "200",
@@ -12,7 +12,10 @@ export const palettesShades = [
   "950"
 ];
 
-export const palettes = {
+type Palette = Record<number, string>;
+type Palettes = Record<string, Palette>;
+
+const palettes: Palettes = {
   purple: {
     50: "#f1e6ff",
     100: "#e3ccff",
@@ -92,3 +95,13 @@ export const palettes = {
     950: "#422006"
   }
 };
+
+export type {
+  Palette,
+  Palettes
+}
+
+export {
+  palettesShades,
+  palettes
+}

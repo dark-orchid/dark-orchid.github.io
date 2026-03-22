@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef } from "react";
 import clsx from "clsx";
-import { AsProp } from "~/lib/shared/props";
+import { AsProp } from "~/lib/types/react";
 
 function BentoGrid ({children, ...props}: ComponentPropsWithRef<"div">) {
   return (

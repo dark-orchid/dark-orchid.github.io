@@ -1,7 +1,6 @@
 import clsx from "clsx"
 import { ComponentPropsWithRef } from "react"
-import { RGB } from "~/lib/shared/color"
-import { AsProp } from "~/lib/shared/props"
+import { AsProp } from "~/lib/types/react"
 
 type LinearGradientProps <
   T extends React.ElementType

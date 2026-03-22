@@ -2,8 +2,9 @@ import "~/app/assets/styles/fonts.css"
 import "~/app/assets/styles/global.css"
 import "./globals.css";
 import {ReactNode} from "react"
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Dark Orchid — A Colorscheme, that's purple.",
   description: "The Dark Orchid Theme is a cohesive visual ecosystem built around the striking color purple."
 }

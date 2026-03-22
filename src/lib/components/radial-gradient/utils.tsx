@@ -1,4 +1,4 @@
-import { RGB } from "~/lib/shared/color";
+import { RGB } from "~/lib/types/color";
 
 function integrationGradient (rgb: RGB): string[] {
   return [

@@ -1,14 +1,15 @@
-import { BinocularsIcon, DiamondPlusIcon, GithubIcon, HeartHandshakeIcon, HeartIcon, IterationCwIcon, RocketIcon, SparklesIcon } from "lucide-react";
+import { BinocularsIcon, DiamondPlusIcon, GithubIcon, HeartHandshakeIcon, HeartIcon, RocketIcon, SparklesIcon } from "lucide-react";
 import { Footer } from "~/lib/landing/components/footer/footer";
 import { Header } from "~/lib/landing/components/header/header";
 import { Button } from "~/lib/shadcn/components/ui/button";
 import Link from "next/link";
-import { ROUTES } from "~/lib/shared/routes";
+import { routes } from "~/lib/shared/routes";
 import { BentoGrid, BentoGridItem, BentoGridItemDescription, BentoGridItemTitle } from "~/lib/components/bento/bento";
 import { RadialGradient } from "~/lib/components/radial-gradient/radial-gradient";
-import { IntegrationLogo, PREVIEW_INTEGRATIONS } from "~/lib/landing/components/bento/bento";
+import { IntegrationLogo } from "~/lib/landing/components/bento/bento";
 import React from "react";
 import { SPONSOR_LINK } from "~/lib/landing/constants/links";
+import { previewIntegrations } from "~/lib/landing/constants/integrations";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
           </h1>
           <p className="text-xl text-center text-muted-foreground sm:mb-16 mb-8">Dark Orchid is a cohesive visual ecosystem built around the striking color purple.</p>
           <div className="flex gap-4 flex-wrap">
-            <Link href={ [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.GENERAL.BASE, "/", ROUTES.DOCS.GENERAL.GETTING_STARTED ].join("") } passHref>
+            <Link href={ [ routes.base, routes.docs.base, routes.docs.general.base, routes.docs.general.gettingStarted].join("/") } passHref>
               <Button className="bg-purple-500 text-zinc-100 hover:text-purple-400 transition-colors">
                 <SparklesIcon />
                 Get Started
@@ -78,14 +79,20 @@ export default function Home() {
                 className="flex gap-4 p-16 flex-wrap justify-center items-center"
               >
                 {
-                  PREVIEW_INTEGRATIONS.map(({Icon, gradient}, index) => (
+                  previewIntegrations.map(({Icon, gradient}, index) => (
                     <IntegrationLogo
+                      className="group"
                       key={index}
                     >
                       <Icon width={42} height={42} />
                       <RadialGradient
                         overlay
                         className="blur-2xl"
+                        colors={[gradient]}
+                      />
+                      <RadialGradient
+                        overlay
+                        className="blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"
                         colors={[gradient]}
                       />
                     </IntegrationLogo>
@@ -102,10 +109,21 @@ export default function Home() {
               </Link>
             </BentoGridItem>
             <BentoGridItem
-              className="col-span-4 relative overflow-hidden rounded-xl p-6 flex flex-col justify-between"
+              className="col-span-4 relative overflow-hidden rounded-xl p-6 flex flex-col justify-between group"
             >
               <RadialGradient
                 className="blur-3xl absolute z-[-1] top-1/2"
+                overlay
+                colors={[
+                  [
+                    "50% 50% at 50% 50%",
+                    "rgba(138, 43, 226, 0.3) 0%",
+                    "rgba(138, 43, 226, 0) 100%"
+                  ]
+                ]}
+              />
+              <RadialGradient
+                className="blur-3xl absolute z-[-1] top-1/2 group-hover:opacity-100 opacity-0 transition-opacity"
                 overlay
                 colors={[
                   [
@@ -139,10 +157,22 @@ export default function Home() {
               </Link>
             </BentoGridItem>
             <BentoGridItem
-              className="col-span-4 relative overflow-hidden rounded-xl p-6 flex flex-col justify-between"
+              className="col-span-4 relative overflow-hidden rounded-xl p-6 flex flex-col justify-between group"
             >
               <RadialGradient
                 className="blur-3xl absolute z-[-1]"
+                overlay
+                colors={[
+                  [
+                    "50% 50% at 50% 50%",
+                    "rgba(0, 0, 0, 0) 0%",
+                    "rgba(0, 0, 0, 0) 80%",
+                    "rgba(0, 0, 0, 1) 100%"
+                  ]
+                ]}
+              />
+              <RadialGradient
+                className="blur-3xl absolute z-[-1] opacity-0 group-hover:opacity-100 transition-opacity"
                 overlay
                 colors={[
                   [
@@ -166,7 +196,7 @@ export default function Home() {
               </Button>
             </BentoGridItem>
             <BentoGridItem
-              className="col-span-8 p-6 rounded-xl relative overflow-hidden"
+              className="col-span-8 p-6 rounded-xl relative overflow-hidden group"
             >
               <RadialGradient
                 className="blur-3xl absolute z-[-1]"
@@ -182,6 +212,17 @@ export default function Home() {
               />
               <RadialGradient
                 className="blur-3xl absolute z-[-1]"
+                overlay
+                colors={[
+                  [
+                    "50% 50% at 50% 50%",
+                    "rgba(138, 43, 226, 0.3) 0%",
+                    "rgba(138, 43, 226, 0) 100%"
+                  ]
+                ]}
+              />
+              <RadialGradient
+                className="blur-3xl absolute z-[-1] opacity-0 group-hover:opacity-100 transition-opacity"
                 overlay
                 colors={[
                   [
@@ -212,8 +253,7 @@ export default function Home() {
                 ></div>
                 <IntegrationLogo>
                   <DiamondPlusIcon
-                    color="#d6d3d1"
-                    className="w-6 h-6"
+                    className="w-6 h-6 text-gray-400"
                   />
                 </IntegrationLogo>
               </div>

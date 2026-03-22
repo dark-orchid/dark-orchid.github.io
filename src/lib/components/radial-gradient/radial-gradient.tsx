@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { ComponentPropsWithRef } from "react";
-import { AsProp } from "~/lib/shared/props";
+import { AsProp } from "~/lib/types/react";
 
 type RadialGradientProps <
   T extends React.ElementType

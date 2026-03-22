@@ -2,7 +2,7 @@ import { Fragment, ReactNode } from "react";
 import Link from "next/link";
 import { Separator } from "~/lib/shadcn/components/ui/separator";
 import { Button } from "~/lib/shadcn/components/ui/button";
-import { footerMenu } from "../../menu";
+import { footerMenu } from "~lib/landing/constants/menu";
 
 export function Footer (): ReactNode {
   return (

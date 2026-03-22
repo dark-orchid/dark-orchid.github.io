@@ -1,14 +1,14 @@
 import { ReactNode } from "react";
-import ColorField from "~/lib/docs/components/color-field/color-field";
-import { TypographyH1, TypographyP } from "~/lib/docs/components/mdx/typography";
-import { capitalize } from "~/lib/shared/utils";
-import { palettes, palettesShades } from "~lib/docs/specs";
+import ColorField from "~/lib/components/color-field/color-field";
+import { TypographyH1, TypographyP } from "~/lib/components/typography/typography";
+import { capitalize } from "~/lib/utils/string";
+import { palettes, palettesShades } from "~/lib/docs/constants/specs";
 
 export default function Page (): ReactNode {
   return (
     <>
       <TypographyH1>Palettes</TypographyH1>
-      <TypographyP>Explore the colors that define the look and feel of this theme.</TypographyP>
+      <TypographyP className="mb-4">Explore the colors that define the look and feel of this theme.</TypographyP>
       <table className="block border-spacing-4 border-separate">
         <thead>
           <tr className="text-zinc-300 font-normal">
@@ -32,8 +32,8 @@ export default function Page (): ReactNode {
                     <p className="text-zinc-300 font-medium">{ name }</p>
                   </td>
                   {
-                    Object.keys(colors).map((key, index): ReactNode => {
-                      const color = colors[key];
+                    Object.keys(colors).map((key: string, index): ReactNode => {
+                      const color = colors[key as unknown as number];
 
                       return (
                         <td key={index}>

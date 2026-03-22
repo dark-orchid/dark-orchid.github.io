@@ -4,7 +4,7 @@ import { Separator } from "~lib/shadcn/components/ui/separator";
 import { Badge } from "~lib/shadcn/components/ui/badge";
 import Link from "next/link";
 import { ReactNode } from "react";
-import { TypographyH1, TypographyH2, TypographyP } from "~/lib/docs/components/mdx/typography";
+import { TypographyH1, TypographyH2, TypographyP } from "~/lib/components/typography/typography";
 import { RadialGradient } from "~/lib/components/radial-gradient/radial-gradient";
 
 export default function Page (): ReactNode {
@@ -17,14 +17,25 @@ export default function Page (): ReactNode {
       </TypographyH1>
       <TypographyP className="mb-16!">The foundation for seamless design is just one step away.</TypographyP>
 
+      <Separator orientation="horizontal" className="mb-16" />
+
       <div className="grid md:grid-cols-2 grid-flow-dense gap-2 md:gap-4 mb-16">
         <Link href="" passHref>
-          <Card className="h-full overflow-hidden relative">
+          <Card className="h-full overflow-hidden relative group">
             <RadialGradient
               overlay
               className="blur-3xl"
               colors={[[
-                "50% 50% at 50% 50%",
+                "50% 50% at 25% 50%",
+                "rgba(34, 197, 94, 0.2) 0%",
+                "rgba(34, 197, 94, 0) 100%"
+              ]]}
+            />
+            <RadialGradient
+              overlay
+              className="blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"
+              colors={[[
+                "50% 50% at 25% 50%",
                 "rgba(34, 197, 94, 0.2) 0%",
                 "rgba(34, 197, 94, 0) 100%"
               ]]}
@@ -39,12 +50,21 @@ export default function Page (): ReactNode {
           </Card>
         </Link>
         <Link href="" passHref>
-          <Card className="h-full overflow-hidden relative">
+          <Card className="h-full overflow-hidden relative group">
             <RadialGradient
               overlay
               className="blur-3xl"
               colors={[[
-                "50% 50% at 50% 50%",
+                "50% 50% at 25% 50%",
+                "rgba(236, 72, 153, 0.3) 0%",
+                "rgba(236, 72, 153, 0) 100%"
+              ]]}
+            />
+            <RadialGradient
+              overlay
+              className="blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"
+              colors={[[
+                "50% 50% at 25% 50%",
                 "rgba(236, 72, 153, 0.3) 0%",
                 "rgba(236, 72, 153, 0) 100%"
               ]]}
@@ -59,12 +79,21 @@ export default function Page (): ReactNode {
           </Card>
         </Link>
         <Link href="" passHref>
-          <Card className="h-full overflow-hidden relative">
+          <Card className="h-full overflow-hidden relative group">
             <RadialGradient
               overlay
               className="blur-3xl"
               colors={[[
-                "50% 50% at 50% 50%",
+                "50% 50% at 25% 50%",
+                "rgba(6, 182, 212, 0.2) 0%",
+                "rgba(6, 182, 212, 0) 100%"
+              ]]}
+            />
+            <RadialGradient
+              overlay
+              className="blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"
+              colors={[[
+                "50% 50% at 25% 50%",
                 "rgba(6, 182, 212, 0.2) 0%",
                 "rgba(6, 182, 212, 0) 100%"
               ]]}
@@ -79,12 +108,21 @@ export default function Page (): ReactNode {
           </Card>
         </Link>
         <Link href="" passHref>
-          <Card className="h-full overflow-hidden relative">
+          <Card className="h-full overflow-hidden relative group">
             <RadialGradient
               overlay
               className="blur-3xl"
               colors={[[
-                "50% 50% at 50% 50%",
+                "50% 50% at 25% 50%",
+                "rgba(139, 92, 246, 0.3) 0%",
+                "rgba(139, 92, 246, 0) 100%"
+              ]]}
+            />
+            <RadialGradient
+              overlay
+              className="blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"
+              colors={[[
+                "50% 50% at 25% 50%",
                 "rgba(139, 92, 246, 0.3) 0%",
                 "rgba(139, 92, 246, 0) 100%"
               ]]}

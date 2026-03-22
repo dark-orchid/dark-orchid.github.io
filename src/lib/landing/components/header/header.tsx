@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Separator } from "~/lib/shadcn/components/ui/separator";
 import { MenuIcon, XIcon } from "lucide-react";
 import { Button } from "~/lib/shadcn/components/ui/button";
-import { navMenu } from "../../menu";
+import { navMenu } from "../../constants/menu";
 import { socialMenu } from "~/lib/shared/menu";
 import clsx from "clsx";
 

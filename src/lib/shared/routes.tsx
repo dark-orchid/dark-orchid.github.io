@@ -1,30 +1,34 @@
-export const ROUTES = {
-  BASE: "",
-  DOCS: {
-    BASE: "docs",
-    GENERAL: {
-      BASE: "general",
-      GETTING_STARTED: "getting-started",
-      ABOUT: "about",
-      MAINTAINERS: "maintainers",
-      CONTRIBUTIONS: "contributions",
-      HELP: "help"
+const routes = {
+  base: "",
+  docs: {
+    base: "docs",
+    general: {
+      base: "general",
+      gettingStarted: "getting-started",
+      about: "about",
+      maintainers: "maintainers",
+      contributions: "contributions",
+      help: "help"
     },
-    INTEGRATIONS: {
-      BASE: "integrations",
-      NEOVIM: "neovim",
-      DISCORD: "discord"
+    integrations: {
+      base: "integrations",
+      neovim: "neovim",
+      discord: "discord"
     },
-    SPECS: {
-      BASE: "specs",
-      PALETTES: "palettes",
-      TOKENS: "tokens"
+    specs: {
+      base: "specs",
+      palettes: "palettes",
+      tokens: "tokens"
     },
-    LEGAL: {
-      BASE: "legal",
-      DISCLAIMER: "disclaimer",
-      CODE_OF_CONDUCT: "code-of-conduct",
-      LICENSE: "license"
+    legal: {
+      base: "legal",
+      disclaimer: "disclaimer",
+      codeOfConduct: "code-of-conduct",
+      license: "license"
     }
   }
+}
+
+export {
+  routes
 }

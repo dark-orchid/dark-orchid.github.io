@@ -1,20 +1,24 @@
 import { ReactNode } from "react";
-import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "~/lib/shadcn/components/ui/sidebar";
-import { footerMenu, generalMenu, integrationsMenu, specsMenu } from "../../menu";
+import { Sidebar as ShadcnSidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from "~/lib/shadcn/components/ui/sidebar";
+import { footerMenu, generalMenu, integrationsMenu, specsMenu } from "../../constants/menu";
 import Link from "next/link";
 import { Separator } from "~/lib/shadcn/components/ui/separator";
 import { Badge } from "~/lib/shadcn/components/ui/badge";
-import { ROUTES } from "~/lib/shared/routes";
+import { routes } from "~/lib/shared/routes";
 import { Tooltip, TooltipContent, TooltipTrigger } from "~/lib/shadcn/components/ui/tooltip";
 
-export function AppSidebar (): ReactNode {
+export function Sidebar (): ReactNode {
   const { state } = useSidebar();
 
   return (
     <>
-      <Sidebar className="border-none" variant="floating" collapsible="icon">
+      <ShadcnSidebar
+        className="border-none"
+        variant="floating"
+        collapsible="icon"
+      >
         <SidebarHeader>
-          <Link href={ [ ROUTES.BASE, "/", ROUTES.DOCS.BASE, "/", ROUTES.DOCS.GENERAL.BASE, "/", ROUTES.DOCS.GENERAL.GETTING_STARTED ].join("") } className="flex items-center space-x-1">
+          <Link href={ [ routes.base, routes.docs.base, routes.docs.general.base , routes.docs.general.gettingStarted ].join("/") } className="flex items-center space-x-1">
               <img src="/images/196x196.png" className="w-12" />
               <span className={(state === "expanded" ? "block" : "hidden") + " text-xl text-nowrap text-foreground font-medium"}>Dark Orchid</span>
           </Link>
@@ -185,7 +189,7 @@ export function AppSidebar (): ReactNode {
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarFooter>
-      </Sidebar>
+      </ShadcnSidebar>
     </>
   );
 }
